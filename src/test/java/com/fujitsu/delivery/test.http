@@ -1,0 +1,2 @@
+### Trigger manual weather data import
+POST http://localhost:8080/api/admin/weather/import

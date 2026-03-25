@@ -8,8 +8,9 @@ class CityTest {
 
     @Test
     void stationName_shouldReturnCorrectStation_forEachCity() {
+        // Act & Assert
         assertThat(City.TALLINN.stationName()).isEqualTo("Tallinn-Harku");
-        assertThat(City.TARTU.stationName()).isEqualTo("Tartu-Tõdvavere");
+        assertThat(City.TARTU.stationName()).isEqualTo("Tartu-Tõravere");
         assertThat(City.PÄRNU.stationName()).isEqualTo("Pärnu");
     }
 

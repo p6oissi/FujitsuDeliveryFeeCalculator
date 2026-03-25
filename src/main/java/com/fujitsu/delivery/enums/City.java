@@ -9,7 +9,7 @@ public enum City {
     public String stationName() {
         return switch (this) {
             case TALLINN -> "Tallinn-Harku";
-            case TARTU -> "Tartu-Tõdvavere";
+            case TARTU -> "Tartu-Tõravere";
             case PÄRNU -> "Pärnu";
         };
     }
