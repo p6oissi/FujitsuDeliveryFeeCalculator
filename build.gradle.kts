@@ -37,7 +37,7 @@ dependencies {
     // XML parsing for the weather API response
     implementation("com.fasterxml.jackson.dataformat:jackson-dataformat-xml")
     // Swagger UI — auto-generates API docs
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:3.0.2")
 }
 
 tasks.withType<Test> {

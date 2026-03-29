@@ -40,4 +40,20 @@ class GlobalExceptionHandlerTest {
                 .isNotNull()
                 .containsEntry("error", "No weather data available for city: TARTU");
     }
+
+    @Test
+    void illegalArgument_shouldReturn400AndPreserveMessage() {
+        // Arrange
+        GlobalExceptionHandler handler = new GlobalExceptionHandler();
+        IllegalArgumentException exception = new IllegalArgumentException("Base fee not found: some-id");
+
+        // Act
+        ResponseEntity<Map<String, String>> response = handler.handleBadRequest(exception);
+
+        // Assert
+        assertThat(response.getStatusCode().value()).isEqualTo(400);
+        assertThat(response.getBody())
+                .isNotNull()
+                .containsEntry("error", "Base fee not found: some-id");
+    }
 }
